@@ -1,0 +1,501 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+.heading{
+    font-size: 40px;
+    font-weight: bold;
+    color: #004080;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* General Header Styling */
+.header {
+    background-color: #333; /* Dark background */
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.header .container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between left and right */
+    align-items: center; /* Align items vertically */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+    padding: 0 1rem; /* Add padding for smaller screens */
+}
+
+/* Left Side: Logo Styling */
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffcc00; /* Highlighted logo color */
+    margin: 0; /* Remove default margin */
+}
+
+/* Right Side: Menu Styling */
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem; /* Space between links */
+    font-size: 1rem;
+    transition: color 0.3s; /* Smooth hover effect */
+}
+
+.menu a:hover {
+    color: #ffcc00; /* Highlight menu items on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column; /* Stack logo and menu vertically */
+        text-align: center;
+    }
+
+    .menu a {
+        margin: 1rem 0.5rem; /* Space between stacked links */
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.hero .cta-btn {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Sections */
+section {
+    padding: 3rem 0;
+}
+
+.about, .services, .gallery, .testimonials, .contact {
+    text-align: center;
+}
+/* General Styling */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+/* Individual Card Styling */
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-title {
+    font-size: 20px;
+    color: #333;
+    margin: 15px 20px 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #555;
+    margin: 0 20px 20px;
+    line-height: 1.5;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 18px;
+    }
+    .card-description {
+        font-size: 13px;
+    }
+    .card-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-title {
+        font-size: 16px;
+    }
+    .card-description {
+        font-size: 12px;
+    }
+    .card-image {
+        height: 150px;
+    }
+}
+
+
+.gallery-grid img {
+    width: 100%;
+    max-width: 345px;
+    border-radius: 5px;
+}
+
+form input, form textarea, form button {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+form button {
+    background: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+
+.hero {
+    background: url('https://img.freepik.com/free-photo/hammocks-umbrellas-placed-near-pool_1203-189.jpg?semt=ais_hybrid') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 10rem 0;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2; /* Ensures content stays above the overlay */
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.testimonials {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+.testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+}
+.card h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Set a fixed width for consistent sizing */
+    text-align: center;
+}
+
+.card h4 {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-cards, .testimonial-cards, .gallery-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+
+
+/* General Section Styling */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left Side Content */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 20px;
+}
+
+.info-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Right Side Form */
+.contact-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.form-button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #ff6600;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .contact-info,
+    .contact-box {
+        min-width: 100%;
+    }
+
+    .contact-info {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .info-title {
+        font-size: 24px;
+    }
+
+    .info-text {
+        font-size: 14px;
+    }
+
+    .box-title {
+        font-size: 22px;
+    }
+
+    .form-label {
+        font-size: 13px;
+    }
+
+    .form-input,
+    .form-textarea {
+        font-size: 14px;
+    }
+
+    .form-button {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-title,
+    .box-title {
+        font-size: 20px;
+    }
+
+    .info-text {
+        font-size: 13px;
+    }
+
+    .form-input,
+    .form-textarea {
+        font-size: 13px;
+    }
+
+    .form-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+
+
+/* Fixed Button Styling */
+.fixed-btn {
+    position: fixed;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.whatsapp-btn {
+    background-color: #25d366;
+    right: 20px;
+}
+
+.call-btn {
+    background-color: #75b5f9;
+    left: 20px;
+}
+
+/* Hover Effect */
+.fixed-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
